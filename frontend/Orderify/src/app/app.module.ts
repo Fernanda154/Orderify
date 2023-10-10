@@ -6,10 +6,14 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { ListUsersComponent } from './Users/list-users/list-users.component';
+import { ListUsersComponent } from './pages/Users/list-users/list-users.component';
 import { UserService } from './Service/User/user.service';
 import { HeaderComponent } from './Components/header/header.component';
-import { RegisterUsersComponent } from './Users/register-users/register-users.component';
+import { RegisterUsersComponent } from './pages/Users/form-users/register-users.component';
+import { ListGroupsComponent } from './pages/Groups/list-groups/list-groups.component';
+import { FormGroupsComponent } from './pages/Groups/form-groups/form-groups.component';
+import { FormOrderComponent } from './ServicesOrder/form-order/form-order.component';
+import { ListOrderComponent } from './ServicesOrder/list-order/list-order.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +21,11 @@ import { RegisterUsersComponent } from './Users/register-users/register-users.co
     HomeComponent,
     ListUsersComponent,
     HeaderComponent,
-    RegisterUsersComponent
+    RegisterUsersComponent,
+    ListGroupsComponent,
+    FormGroupsComponent,
+    FormOrderComponent,
+    ListOrderComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,13 @@
+<app-header></app-header>
+<div class="container mt-4">
+    <h2>Formulário de Grupos</h2>
+    <form (submit)="onSubmit(form.value)" #form="ngForm">
+        <input type="hidden" name="id" [(ngModel)]="group.id">
+        <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="group.name" ngModel required>
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+  </div>
+  

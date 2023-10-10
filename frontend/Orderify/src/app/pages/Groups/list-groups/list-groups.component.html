@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="container mt-4">
+    <h2>Listagem de grupos</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nome</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let group of groups">
+          <td>{{ group.id }}</td>
+          <td>{{ group.name }}</td>
+          <td><button (click)="excluirGrupo(group.id)">Excluir</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,14 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { ListUsersComponent } from './Users/list-users/list-users.component';
-import { RegisterUsersComponent } from './Users/register-users/register-users.component';
+import { ListUsersComponent } from './pages/Users/list-users/list-users.component';
+import { RegisterUsersComponent } from './pages/Users/form-users/register-users.component';
+import { ListGroupsComponent } from './pages/Groups/list-groups/list-groups.component';
+import { FormGroupsComponent } from './pages/Groups/form-groups/form-groups.component';
+import { ListOrderComponent } from './ServicesOrder/list-order/list-order.component';
+import { FormOrderComponent } from './ServicesOrder/form-order/form-order.component';
+
 
 const routes: Routes = [
   
   {path: 'users', component: ListUsersComponent},
-  {path: 'register-user', component: RegisterUsersComponent},
-  { path: 'register-user/:id', component: RegisterUsersComponent }, 
+  {path: 'form-user', component: RegisterUsersComponent},
+  {path: 'form-user/:id', component: RegisterUsersComponent }, 
+  {path: 'groups', component: ListGroupsComponent }, 
+  {path: 'form-group', component: FormGroupsComponent }, 
+  {path: 'form-group/:id', component: FormGroupsComponent },
+  {path: 'orders', component: ListOrderComponent },  
+  {path: 'form-order', component: FormOrderComponent },
+  {path: 'form-order/:id', component: FormOrderComponent },
   //{path: '', redirectTo: '/users', pathMatch: 'full'},
 ];
 
