@@ -16,6 +16,18 @@ export class ListUsersComponent {
   ngOnInit(){
     this.getAlUsers();
   }
+  excluirUsuario(id: number){
+    this.usersService.deleteUser(id).subscribe(users => {
+      const index = this.users.findIndex(user => user.id === id);
+      if (index !== -1) {
+        this.users.splice(index, 1);
+      }
+      console.log("EXCLUÌDO");
+      
+    }, err =>{
+      console.log("deu ruim apagar", err);
+    });
+  }
   getAlUsers(){
     this.usersService.getUsers().subscribe(users => {
       console.log("Resu:", users);
