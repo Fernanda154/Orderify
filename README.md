@@ -26,7 +26,7 @@ Antes de começar, certifique-se de ter os seguintes pré-requisitos instalados 
    Abra o terminal (ou prompt de comando) e navegue até o diretório onde você deseja clonar o repositório. Em seguida, execute o seguinte comando:
 
    ```bash
-   cd backend/nome-do-repositorio
+   cd frontend/nome-do-repositorio
    
 3. **Em seguida, instale as dependências do projeto usando o npm:** 
     ```bash
@@ -46,8 +46,9 @@ Antes de começar, certifique-se de ter os seguintes pré-requisitos instalados 
 1. **Clone o Repositório**
 
   Navegue até o diretório da aplicação usando o terminal: 
-  cd frontend/nome_do_projeto
-
+  ```bash
+  cd backend/nome_do_projeto
+``
  Instale as dependências usando o Composer:
  ```bash
   composer install
