@@ -19,7 +19,7 @@ Antes de começar, certifique-se de ter os seguintes pré-requisitos instalados 
    Abra o terminal (ou prompt de comando) e navegue até o diretório onde você deseja clonar o repositório. Em seguida, execute o seguinte comando:
 
    ```bash
-   git clone https://github.com/seu-usuario/nome-do-repositorio.git
+   git clone https://github.com/Fernanda154/Orderify](https://github.com/Fernanda154/Orderify.git
 
 2. **Instale as Dependências**
 
