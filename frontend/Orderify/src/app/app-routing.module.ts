@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'orders', component: ListOrderComponent },  
   {path: 'form-order', component: FormOrderComponent },
   {path: 'form-order/:id', component: FormOrderComponent },
-  //{path: '', redirectTo: '/users', pathMatch: 'full'},
+  {path: '', redirectTo: '/users', pathMatch: 'full'},
 ];
 
 @NgModule({

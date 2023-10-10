@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { ServiceOrderService } from 'src/app/Service/ServiceOrder/service-order.service';
 import { ServiceOrder } from 'src/app/Service/ServiceOrder/service-order.model';
+import * as pdfMake from 'pdfmake/build/pdfmake';
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+(pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
 
 @Component({
   selector: 'app-list-order',
@@ -26,6 +29,21 @@ export class ListOrderComponent {
     }, err =>{
       console.log("deu ruim apagar", err);
     });
+  }
+  generatePDF() {
+    const documentDefinition = {
+      content: [
+        {
+          table: {
+            body: [
+              ['Código', 'Título', 'Status'],
+              ...this.orders.map(item => [item.id, item.title, item.status])
+            ]
+          }
+        }
+      ]
+    };
+    pdfMake.createPdf(documentDefinition).open();
   }
   getAllOrders(){
     this.ordersService.getOrder().subscribe(orders => {

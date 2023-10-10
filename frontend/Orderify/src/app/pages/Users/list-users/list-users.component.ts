@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { UserService } from '../../../Service/User/user.service';
 import { User } from '../../../Service/User/user.model';
+import * as pdfMake from 'pdfmake/build/pdfmake';
+import * as pdfFonts from 'pdfmake/build/vfs_fonts';
+(pdfMake as any).vfs = pdfFonts.pdfMake.vfs;
 
 @Component({
   selector: 'app-list-users',
@@ -15,6 +18,21 @@ export class ListUsersComponent {
   }
   ngOnInit(){
     this.getAlUsers();
+  }
+  generatePDF() {
+    const documentDefinition = {
+      content: [
+        {
+          table: {
+            body: [
+              ['Código', 'Nome', 'Idade'],
+              ...this.users.map(item => [item.id, item.name, item.email])
+            ]
+          }
+        }
+      ]
+    };
+    pdfMake.createPdf(documentDefinition).open();
   }
   excluirUsuario(id: number){
     this.usersService.deleteUser(id).subscribe(users => {
