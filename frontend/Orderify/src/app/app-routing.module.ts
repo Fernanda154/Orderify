@@ -4,8 +4,8 @@ import { ListUsersComponent } from './pages/Users/list-users/list-users.componen
 import { RegisterUsersComponent } from './pages/Users/form-users/register-users.component';
 import { ListGroupsComponent } from './pages/Groups/list-groups/list-groups.component';
 import { FormGroupsComponent } from './pages/Groups/form-groups/form-groups.component';
-import { ListOrderComponent } from './ServicesOrder/list-order/list-order.component';
-import { FormOrderComponent } from './ServicesOrder/form-order/form-order.component';
+import { ListOrderComponent } from './pages/ServicesOrder/list-order/list-order.component';
+import { FormOrderComponent } from './pages/ServicesOrder/form-order/form-order.component';
 
 
 const routes: Routes = [

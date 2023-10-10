@@ -1,6 +1,7 @@
 <app-header></app-header>
 <div class="container mt-4">
     <h2>Listagem de usuários</h2>
+    <button routerLink="/form-user">Novo</button>
     <table class="table">
       <thead>
         <tr>
@@ -15,7 +16,7 @@
           <td>{{ user.id }}</td>
           <td>{{ user.name }}</td>
           <td>{{ user.email }}</td>
-          <td><button (click)="excluirUsuario(user.id)">Excluir</button></td>
+          <td><button (click)="excluirUsuario(user.id)">Excluir</button><button routerLink="/form-user/{{user.id}}">Visualizar</button></td>
         </tr>
       </tbody>
     </table>
